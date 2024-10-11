@@ -21,24 +21,26 @@ def get_college_stats(str_name):
         for i in range (len(list)):
             print("[" + str(i +1) + "] " + list[i]["Institution Name"])
 
-            print("")
-            new_num = input("Select [1-" + str(len(list)) + "]" + "\n")
+            
+        new_num = input("Select [1-" + str(len(list)) + "]" + "\n")
         
 
         if int(new_num) < 1 or int(new_num) > len(list):
             return "Error. Selected number not in list bounds"
         
         else:
-            final_list.append(list[int(new_num)-1]) 
+            temp = list[int(new_num)-1]
+
+            final_list.append(temp) 
     
     else:
         final_list.append(list[0]) 
 
 
 
-        resultName = final_list[0]["Institution Name"]
-        ans = "Here are the average stats for " + resultName + ": \n Average SAT score for males: " + final_list[0]["Average SAT for males"]  + ": \n Average SAT score for females: " + final_list[0]["Average SAT for females"] + ": \n Average GPA for males: " + final_list[0]["Average GPA for males"] + ": \n Average GPA for females: " + final_list[0]["Average GPA for females"] + ": \n Average AP classes for males: " + final_list[0]["Average number of AP Classes as male"] + ": \n Average AP classes for females: " + final_list[0]["Average number of AP Classes as female"] + ": \n Average Number of Extracurriculars: " + final_list[0]["Average number of Extracurriculars"]
-        return ans
+    resultName = final_list[0]["Institution Name"]
+    ans = "Here are the average stats for " + resultName + ": \n Average SAT score for males: " + final_list[0]["Average SAT for males"]  + ": \n Average SAT score for females: " + final_list[0]["Average SAT for females"] + ": \n Average GPA for males: " + final_list[0]["Average GPA for males"] + ": \n Average GPA for females: " + final_list[0]["Average GPA for females"] + ": \n Average AP classes for males: " + final_list[0]["Average number of AP Classes as male"] + ": \n Average AP classes for females: " + final_list[0]["Average number of AP Classes as female"] + ": \n Average Number of Extracurriculars: " + final_list[0]["Average number of Extracurriculars"]
+    return ans
 
 
 
